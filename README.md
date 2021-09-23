@@ -1,2 +1,3 @@
 # cvProjelerim
-Yapmış olduğum projeler.
+## Yapmış olduğum projeler  </br>
+Not: WindowsFormKOS isimli projem Kütüphane Otomasyonudur. 
