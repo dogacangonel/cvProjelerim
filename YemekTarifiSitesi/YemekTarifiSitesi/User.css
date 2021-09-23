@@ -1,0 +1,26 @@
+﻿a:link {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    font-size: 20px;
+    color: chocolate;
+}
+
+.textbox {
+    border: 2px solid #456879;
+    border-radius: 10px;
+    height: 22px;
+    width: 230px;
+}
+
+.fb8 {
+    border: 2px solid #777;
+    border-radius: 10px;
+    outline: none;
+    font-weight:bold;
+    width:230px;
+    height:25px;
+}

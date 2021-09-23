@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrnekNotePadUygulaması", "OrnekNotePadUygulaması\OrnekNotePadUygulaması.csproj", "{768B0EC8-58F3-44B2-9008-9D7005430C2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Img", "Img", "{17121586-E556-4145-A51C-57D3503F2D7D}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Desktop\indir.png = ..\..\..\Desktop\indir.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{768B0EC8-58F3-44B2-9008-9D7005430C2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{768B0EC8-58F3-44B2-9008-9D7005430C2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{768B0EC8-58F3-44B2-9008-9D7005430C2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{768B0EC8-58F3-44B2-9008-9D7005430C2E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF519B95-888A-4CA9-BC63-C38B93AFC17A}
+	EndGlobalSection
+EndGlobal
