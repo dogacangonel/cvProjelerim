@@ -1,0 +1,55 @@
+﻿@model  MvcKutuphane.Models.Entity.TBLHAREKET
+@using MvcKutuphane.Models.Entity
+
+@{
+    ViewBag.Title = "OduncDetay";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("OduncGuncelle", "Odunc", FormMethod.Post))
+{
+    <div class="form-group" style="margin-top:20px">
+        <div>
+            <label>HAREKET ID</label>
+            @Html.TextBoxFor(h => h.ID, new { @class = "form-control" })
+        </div>
+        <br />
+        <div>
+            <label>UYE</label>
+            @Html.TextBoxFor(h => h.TBLUYELER.AD, new { @class = "form-control" })
+        </div>
+        <br />
+        <div>
+            <label>KİTAP ADI</label>
+            @Html.TextBoxFor(h => h.TBLKITAP.AD, new { @class = "form-control" })
+        </div>
+        <br />
+        <div>
+            <label>PERSONEL</label>
+            @Html.TextBoxFor(h => h.TBLPERSONEL.AD, new { @class = "form-control" })
+        </div>
+        <br />
+        <div>
+            <label>ALIŞ TARİHİ</label>
+            @Html.TextBoxFor(h => h.ALISTARIHI, "{0:dd.MM.yyyy}", new { @class = "form-control" })
+        </div>
+        <br />
+        <div>
+            <label>NORMAL İADE TARİHİ</label>
+            @Html.TextBoxFor(h => h.IADETARIHI, "{0:dd.MM.yyyy}", new { @class = "form-control" })<!--textBox  -->
+        </div>
+        <br />
+        <div>
+            <label>ÜYENİN GERİ GETİRDİĞİ TARİH</label>
+            @Html.TextBoxFor(h => h.UYEGETIRTARIHI, new {@Value=DateTime.Now.ToShortDateString(),@class="form-control"})
+        </div>
+        <br />
+        <div>
+            <label>Geç Gelen Gün Sayısı</label>
+            @Html.TextBox("gecGelen","", new {@Value=ViewBag.dgr,@class="form-control"})
+        </div>
+
+        <button class="btn btn-group" style="margin-top: 10px; background-color: #664E88; color: #A9E4D7 ">Ödünç Kitabı Geri Al</button>
+    </div>
+}
+

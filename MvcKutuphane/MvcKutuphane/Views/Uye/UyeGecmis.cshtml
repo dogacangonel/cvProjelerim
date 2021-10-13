@@ -1,0 +1,34 @@
+﻿@using MvcKutuphane.Models.Entity
+@model List<TBLHAREKET>
+@{
+    ViewBag.Title = "UyeGecmis";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<h2>ÜYE: @ViewBag.dgr</h2>
+
+<table class="table table-striped" style="margin-top:20px">
+    <tr style="background-color:rgb(252,178,22)">
+        <th>ID</th>
+        <th>KİTAP ADI</th>
+        <th>YAZAR</th>
+        <th>KATEGORİ</th>
+        <th>PERSONEL</th>
+        <th>KİTAPEVİ</th>
+        <th>ALIŞ TARİHİ</th>
+        <th>İADE TARİHİ</th>
+    </tr>
+    @foreach (var ktp in Model)
+    {
+<tr>
+    <td>@ktp.ID</td>
+    <td>@ktp.TBLKITAP.AD</td>
+    <td>@ktp.TBLKITAP.TBLYAZAR.AD</td>
+    <td>@ktp.TBLKITAP.TBLKATEGORI.AD</td>
+    <td>@ktp.TBLPERSONEL.AD @ktp.TBLPERSONEL.SOYAD</td>
+    <td>@ktp.TBLKITAP.YAYINEVI</td>
+    <td>@Convert.ToDateTime(@ktp.ALISTARIHI).ToString("dd/MM/yyyy")</td>
+    <td>@Convert.ToDateTime(@ktp.IADETARIHI).ToString("dd/MM/yyyy")</td>
+</tr>
+    }
+</table>

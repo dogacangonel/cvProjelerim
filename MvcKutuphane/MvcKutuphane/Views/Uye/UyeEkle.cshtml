@@ -1,0 +1,61 @@
+﻿@model MvcKutuphane.Models.Entity.TBLUYELER
+@{
+    ViewBag.Title = "UyeEkle";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("UyeEkle", "Uye", FormMethod.Post))
+{
+<div class="form-group" style="margin-top:20px;">
+    <div>
+        <label>AD</label>
+        @Html.TextBoxFor(u => u.AD, new { @class = "form-control" })
+        @Html.ValidationMessageFor(u => u.AD, "", new { @style = "color:red" })
+    </div>
+    <br />
+    <div>
+        <label>SOYAD</label>
+        @Html.TextBoxFor(u => u.SOYAD, new { @class = "form-control" })
+        @Html.ValidationMessageFor(u => u.SOYAD, "", new { @style = "color:red" })
+    </div>
+    <br />
+    <div>
+        <label>MAIL</label>
+        @Html.TextBoxFor(u => u.MAIL, new { @class = "form-control" })
+        @Html.ValidationMessageFor(u => u.MAIL, "", new { @style = "color:red" })
+    </div>
+    <br />
+    <div>
+        <label>KULLANICI ADI</label>
+        @Html.TextBoxFor(u => u.KULLANICIADI, new { @class = "form-control" })
+        @Html.ValidationMessageFor(u => u.KULLANICIADI, "", new { @style = "color:red" })
+    </div>
+    <br />
+    <div>
+        <label>ŞİFRE</label>
+        @Html.TextBoxFor(u => u.SIFRE, new { @class = "form-control" })
+        @Html.ValidationMessageFor(u => u.SIFRE, "", new { @style = "color:red" })
+    </div>
+    <br />
+    <div>
+        <label>FOTOĞRAF</label>
+        @Html.TextBoxFor(u => u.FOTOGRAF, new { @class = "form-control" })
+        @Html.ValidationMessageFor(u => u.FOTOGRAF, "", new { @style = "color:red" })
+    </div>
+    <br />
+    <div>
+        <label>TELEFON</label>
+        @Html.TextBoxFor(u => u.TELEFON, new { @class = "form-control" })
+        @Html.ValidationMessageFor(u => u.TELEFON, "", new { @style = "color:red" })
+    </div>
+    <br />
+    <div>
+        <label>OKUL</label>
+        @Html.TextBoxFor(u => u.OKUL, new { @class = "form-control" })
+        @Html.ValidationMessageFor(u => u.OKUL, "", new { @style = "color:red" })
+    </div>
+
+</div>
+    <button class="btn btn-info" style="margin-top:10px">Kaydet</button>
+}
+

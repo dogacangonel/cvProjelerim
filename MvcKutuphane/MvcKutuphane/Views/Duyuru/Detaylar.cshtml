@@ -1,0 +1,34 @@
+﻿@model MvcKutuphane.Models.Entity.TBLDUYURULAR
+@{
+    ViewBag.Title = "Detaylar";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+@using (Html.BeginForm("DuyuruGuncelle", "Duyuru", FormMethod.Post))
+{
+
+    <div class="form-group" style="margin-top:20px;" >
+        @*<div>
+            <label>ID</label>
+            @Html.TextBoxFor(m=>m.ID,new {@class="form-control readonly" })
+        </div>*@
+        
+        @Html.HiddenFor(m=>m.ID) @*Hidden kullanmamızın nedeni id actionResult tarafanda güncelleme için gerekli bu kaydın id ulasmak için kullanıyoruz*@
+        <div>
+            <label>KATEGORİ</label>
+            @Html.TextBoxFor(m => m.KATEGORI, new { @class="form-control"})
+        </div>
+        <br />
+        <div>
+            <label>İÇERİK</label>
+            @Html.TextBoxFor(m=>m.ICERIK,new {@class="form-control" })
+        </div>
+        <br />
+        <div>
+            <label>TARİH</label>
+            @Html.TextBoxFor(m=>m.TARIH,new {@Value=Convert.ToDateTime(DateTime.Today).ToString("dd/MM/yyyy"),@class="form-control" })
+        </div>
+        <button class="btn btn-warning" style="margin-top:10px;">Güncelle</button>
+    </div>
+
+}

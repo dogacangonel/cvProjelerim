@@ -1,0 +1,61 @@
+﻿@using MvcKutuphane.Models.Entity
+@model List<TBLADMIN>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<link rel="stylesheet" href="~/AdminLTE-3.0.4/plugins/fontawesome-free/css/all.min.css">
+
+
+<table class="table table-striped" style="margin-top:20px;">
+    <tr style="background-color:rgb(252,178,22)">
+        <th>ID</th>
+        <th>KULLANICI</th>
+        <th>YETKİ</th>
+        <th>DÜZENLE</th>
+        <th>SİL</th>
+    </tr>
+    @foreach (var usr in Model)
+    {
+        <tr>
+            <td>@usr.ID</td>
+            <td>@usr.KULLANICI</td>
+            <td>@usr.YETKI</td>
+            <td><a href="/Ayarlar/AdminGuncelle/@usr.ID" class="btn btn-info btn-sm"><i class="fas fa-trash-alt"></i>&nbsp; DÜZENLE</a></td>
+            <td><a href="/Ayarlar/Sil/@usr.ID" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i>&nbsp; SİL</a></td>
+        </tr>
+    }
+
+</table>
+<button class="btn btn-primary" data-toggle="modal" data-target="#Modal1">Yeni Admin Ekle</button>
+
+<!--Yeni Admin Ekle Pop up-->
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Yeni Admin Ekle</h2>
+            </div>
+            <div class="modal-body">
+                <form action="/Ayarlar/YeniAdmin" method="post">
+                    <label>KULLANICI</label>
+                    <input type="text" name="KULLANICI" class="form-control" />
+                    <br />
+                    <label>ŞİFRE</label>
+                    <input type="text" name="SIFRE" class="form-control" />
+                    <br />
+                    <label>Yetki</label>
+                    <input type="text" name="YETKI" class="form-control" style="text-transform:uppercase;" />
+                    <br />
+                    <button class="btn btn-info">Kaydet</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
