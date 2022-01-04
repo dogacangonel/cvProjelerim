@@ -1,5 +1,6 @@
 ﻿using Northwind.Business.Abstract;
 using Northwind.Business.Concrete;
+using Northwind.Business.DependencyResolvers.Ninject;
 using Northwind.DataAccess.Concrete.EntityFramework;
 using Northwind.DataAccess.Concrete.NHibernate;
 using Northwind.Entites.Concrete;
@@ -20,11 +21,11 @@ namespace Northwind.WebFormsUI
         public Form1()
         {
             InitializeComponent();
-            _productService = new ProductManager(new EfProductDal());
-            _categoryService = new CategoryManager(new EfCategoryDal());
+            _productService = InstanceFactory.GetInstance<IProductService>();
+            _categoryService = InstanceFactory.GetInstance<ICategoryService>();
         }
 
-        //Daha sonra anlatılacak ancak genelde business işlemlerinde aşağıdaki Service şeklinde yararlanırız.Ve ayrıntısı Dependency Injecton dersinde ayrıntılı anlatılacak.
+        
         IProductService _productService;
         ICategoryService _categoryService;
 
